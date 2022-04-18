@@ -41,7 +41,7 @@ export const getFixedValue = (number, accuracy) => {
  * @returns {number}
  */
 export const getFlooroCeil = (number) => {
-    if (Math.round(number) % 2 ===0) {
+    if (Math.round(number) % 2 === 0) {
     return Math.floor(number);
     } else{
         return Math.ceil(number);
@@ -56,4 +56,8 @@ export const getFlooroCeil = (number) => {
  * @param {number} to
  * @returns {number}
  */
-export const randomizer = (from, to) => {};
+export const randomizer = (from, to) => {
+    from = Math.ceil(from);
+    to = Math.floor(to);
+    return Math.floor(Math.random() * (to - from)) + from;
+};
